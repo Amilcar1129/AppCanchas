@@ -1,0 +1,101 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Ipiales</ion-title>
+      <ion-buttons slot="end">
+        <ion-icon name="search-outline"></ion-icon>
+        <ion-icon name="chatbubble-outline"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="greeting-section">
+      <p class="greeting">{{user}}</p>
+      <h1>¿Qué hacemos hoy?</h1>
+    </div>
+
+    <ion-grid class="options-section">
+      <ion-row>
+        <ion-col>
+          <ion-card class="option-card">
+            <ion-icon name="basketball-outline"></ion-icon>
+            <p>Reservá una cancha</p>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="option-card">
+            <ion-icon name="people-outline"></ion-icon>
+            <p>Encontrá un partido</p>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="option-card">
+            <ion-icon name="trophy-outline"></ion-icon>
+            <p>Jugá torneos</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="matches-section">
+      <h2>Partidos en Vivo</h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-card class="match-card green-card">
+              <h3>Guillermo López Moreira <br> Diego Cabral</h3>
+              <p>VS</p>
+              <h3>Viani Alfonso <br> Andres Delgado</h3>
+              <span>Final - Caballeros - 3ra Circuito KIA - Villa Morra</span>
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card class="match-card orange-card">
+              <h3>Donatto Serna Thompson <br> Mauricio Rodriguez</h3>
+              <p>VS</p>
+              <h3>Joaquin Vallejo <br> Pablo Cerutti</h3>
+              <span>Final - Caballeros - 2da Circuito KIA - Villa Morra</span>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="notification-section">
+      <ion-card>
+        <h3>Activá las notificaciones</h3>
+        <p>
+          Queremos que te enteres de todo lo que pasa con tus reservas.
+          ¡Activá las notificaciones y no te pierdas de nada!
+        </p>
+        <ion-button expand="block" color="warning">Activar</ion-button>
+      </ion-card>
+    </div>
+  </ion-content>
+
+  <ion-footer>
+    <ion-tab-bar>
+      <ion-tab-button tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="reserve">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <ion-label>Reservar</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="rankings">
+        <ion-icon name="stats-chart-outline"></ion-icon>
+        <ion-label>Rankings</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="matches">
+        <ion-icon name="football-outline"></ion-icon>
+        <ion-label>Partidos</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="profile">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-footer>
+</ion-app>

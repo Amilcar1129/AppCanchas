@@ -1,0 +1,78 @@
+  
+//   /* Media query para pantallas de PC (ancho mínimo de 768px) */
+//   @media screen and (min-width: 1024px) {
+//     ion-content {
+//       justify-content: center;
+//       align-items: center;
+//       height: 100vh;
+//     }
+  
+//     .login-container {
+//       box-shadow: inset 0px 0.1em 0.6em #828492;
+//       max-width: 50%;
+//       margin: 0 auto;
+//       padding: 0;
+// background-color: aqua;
+//       // background: linear-gradient(rgba(194, 188, 188, 0.5), rgba(255, 255, 255, 0.5)),
+//     }
+  
+//     .logo {
+//       max-width: 300px;
+//       border-radius: 20px;
+//     }
+  
+//     h2 {
+//       font-size: 60px;
+//       font-family: Georgia, "Times New Roman", Times, serif;
+//     }
+//     .frase {
+//       padding-top: 30px;
+//       font-size: 25px;
+//       width: 80%;
+//       font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+//         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+//     }
+//   }
+
+/* Imagen de fondo */
+.background {
+    position: absolute;
+    inset: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGcdPkeJ7sZ0eszako2dadtdV7R9P9XXWPl-qB58naaBwOIMletygSe4TZv7LNoiBqEm4&usqp=CAU');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px); /* Desenfoque aplicado únicamente a la imagen */
+    z-index: -1; /* Manda la imagen al fondo */
+  }
+  
+  /* Contenedor del contenido */
+  .content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté sobre la imagen */
+    text-align: center;
+    color: white; /* Texto blanco para contraste */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Centra el contenido verticalmente */
+    padding: 0 20px; /* Margen para evitar texto pegado a los bordes */
+  }
+  
+  /* Estilo para el título */
+.bienvenida {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para visibilidad */
+  }
+  
+  /* Estilo para el texto */
+  .frase {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para legibilidad */
+  }
+  

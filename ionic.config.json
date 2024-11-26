@@ -1,0 +1,7 @@
+{
+  "name": "Canchas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
