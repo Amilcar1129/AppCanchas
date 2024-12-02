@@ -1,0 +1,101 @@
+/* Fondo exclusivo */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/736x/92/17/88/921788e9a1cbb0f4c2f3934880f801cf.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Envía el fondo detrás del contenido */
+}
+
+/* Formulario permanece encima */
+.form-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que ocupe toda la altura */
+}
+
+/* Caja del formulario con transparencia */
+.form-container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad */
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Título del formulario */
+h2 {
+    color: #4CAF50; /* Color verde */
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de ion-item */
+ion-item {
+    --background: none; /* Remover fondo negro predeterminado */
+    --ion-background-color: transparent; /* Transparente */
+    margin: 20px 0; /* Espaciado entre elementos */
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo de ion-input */
+ion-input {
+    --background: #f9f9f9; /* Fondo claro */
+    border: 1px solid #78c972; /* Borde verde */
+    border-radius: 0px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilo del checkbox */
+ion-checkbox {
+    margin-right: 10px;
+    --background: white; /* Fondo blanco */
+    --border-color: #4CAF50; /* Borde verde */
+}
+
+/* Estilo del texto de aceptación */
+ion-item span {
+    color: #4CAF50; /* Cambia el color del texto a verde */
+    font-size: 14px; /* Ajusta el tamaño de fuente */
+    font-weight: bold; /* Hace el texto más destacado */
+    margin-left: 10px; /* Espaciado entre el checkbox y el texto */
+}
+
+/* Botón de registro */
+/* Estilo del botón de registro */
+.register-button {
+    background-color: #4CAF50; /* Fondo verde personalizado */
+    color: white; /* Texto blanco */
+    border: none; /* Quitar borde predeterminado */
+    font-size: 18px; /* Tamaño de la fuente */
+    padding: 10px; /* Espaciado dentro del botón */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Hacerlo interactivo */
+    transition: background-color 0.3s ease; /* Animación de cambio de color */
+    box-shadow: none; /* Quitar sombra predeterminada */
+    --box-shadow: none; /* Asegurar que no tenga sombra */
+}
+
+.register-button:hover {
+    background-color: #45a049; /* Color verde más oscuro al pasar el ratón */
+}
+
+/* Estilo de ion-button para eliminar el estilo predeterminado */
+ion-button {
+    --background: transparent; /* Fondo transparente */
+    --border-color: transparent; /* Borrar borde */
+    --color: inherit; /* Mantener el color heredado del contenedor */
+    --box-shadow: none; /* Quitar sombra predeterminada */
+}

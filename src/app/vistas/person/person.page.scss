@@ -1,0 +1,66 @@
+/* Cambia el color de fondo de ion-content a celeste */
+ion-content {
+  --ion-background-color: #add8e6; /* Color celeste */
+}
+
+/* Contenedor único para todo el contenido, imagen y formulario */
+.content-container {
+  background-color: #add8e6; /* Fondo celeste */
+  padding: 16px;
+}
+
+/* Estilo para el contenedor del perfil */
+.profile-container {
+  padding: 16px;
+}
+
+/* Estilos del encabezado del perfil */
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilo del botón de edición de avatar dentro del contenedor */
+.edit-avatar-button {
+  margin-left: 16px;
+}
+
+/* Estilo para el formulario y mantener su diseño predeterminado */
+.form-container {
+  margin-top: 20px;
+  background-color: #d3d3d3; /* Fondo gris claro */
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Título del formulario */
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #808080; /* Color gris para el texto */
+  font-weight: normal;
+}
+
+/* Estilos de los elementos del formulario */
+.form-item {
+  margin-bottom: 16px;
+}
+
+/* Estilos para los campos con fondo verde */
+.green-input {
+  --background: #d4f8d4 !important; /* Fondo verde claro */
+  --border-radius: 10px;  /* Bordes redondeados */
+  --padding-start: 12px;  /* Padding interno para la entrada */
+  --padding-end: 12px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  --box-shadow: none !important;  /* Eliminar cualquier sombra predeterminada */
+  --color: #000000 !important;  /* Color de texto negro */
+}
+
+/* Estilo para las etiquetas de los campos */
+ion-label {
+  color: #000000; /* Color negro para las etiquetas */
+}

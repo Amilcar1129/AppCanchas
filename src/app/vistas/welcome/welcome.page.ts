@@ -45,10 +45,11 @@ export class WelcomePage implements OnInit {
       message:e.error.message ,
       buttons: ['OK'],
     });
-    await alert.present();
-
-  }
-  })
+    await alert.present(); 
+  }})
   }
   
+  logoutRegister(){
+    this.router.navigateByUrl('/register')
+  }
 }

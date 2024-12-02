@@ -165,9 +165,10 @@ ion-content {
   }
   
   .btn-icon.facebook {
-    background-color: #18f22a;
-    width: 13%;
-    height: 13%;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    width: 13.5%;
+    height: 13.5%;
   }
   
   .btn-icon.google {
@@ -350,6 +351,7 @@ ion-content {
       display: flex;
       justify-content: center;
       gap: 20px;
+
     }
   
     .btn-icon {
@@ -357,7 +359,7 @@ ion-content {
       height: 40px;
     }
   
-    .btn-icon.google {
+ /*   .btn-icon.google {
       background-color: #ffffff;
       border: 2px solid #ccc;
       width: 6%;
@@ -368,6 +370,7 @@ ion-content {
       background-color: #1877f2;
       width: 6%;
       height: 6%;
-    }
+    }*/
+    
   }
   

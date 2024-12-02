@@ -24,11 +24,15 @@ export const routes: Routes = [
   },
   {
     path: 'principal',
-    loadComponent: () => import('./principal/principal.page').then( m => m.PrincipalPage)
+    loadComponent: () => import('./vistas/principal/principal.page').then( m => m.PrincipalPage)
   },
   {
     path: 'person',
-    loadComponent: () => import('./person/person.page').then( m => m.PersonPage)
+    loadComponent: () => import('./vistas/person/person.page').then( m => m.PersonPage)
+  },
+  {
+    path: 'register',
+    loadComponent: () => import('./vistas/register/register.page').then( m => m.RegisterPage)
   },
 
 ];

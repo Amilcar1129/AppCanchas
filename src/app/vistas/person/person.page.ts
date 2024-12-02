@@ -15,8 +15,8 @@ export class PersonPage implements OnInit {
   profile:any;
   personid:any;
   
-  constructor(private UsuarioService:UsuarioService) { 
-    this.personid=localStorage.getItem('id')
+  constructor(private usuarioService:UsuarioService) { 
+    this.personid=localStorage.getItem('id');
   
   }
 
@@ -25,12 +25,13 @@ export class PersonPage implements OnInit {
 
   }
   viewProfile(){
-    this.UsuarioService.getOneUser(this.personid).subscribe({
+    this.usuarioService.getOneUser(this.personid).subscribe({
       next: (data:any) => {
         this.profile=data;
+        debugger
   },
   error: (error:any) => {
-    
+    debugger
 
 }
     })
