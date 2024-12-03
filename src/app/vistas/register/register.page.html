@@ -4,27 +4,23 @@
     <div class="form-wrapper">
       <div class="form-container">
         <div class="form-box">
-          <h2>REGISTER</h2>
+          <h2>REGISTRO</h2>
           <ion-item lines="none">
-            <ion-input placeholder="First Name" type="text"></ion-input>
+            <ion-input #user placeholder="Nombre" type="text"></ion-input>
           </ion-item>
           <ion-item lines="none">
-            <ion-input placeholder="Last Name" type="text"></ion-input>
+            <ion-input #email placeholder="Email" type="text"></ion-input>
           </ion-item>
           <ion-item lines="none">
-            <ion-input placeholder="Email" type="email"></ion-input>
+            <ion-input #password placeholder="Contraseña" type="email"></ion-input>
           </ion-item>
-          <ion-item lines="none">
-            <ion-input placeholder="Password" type="password"></ion-input>
-          </ion-item>
-          <ion-item lines="none">
-            <ion-input placeholder="Confirm Password" type="password"></ion-input>
-          </ion-item>
-          <ion-item lines="none">
-            <ion-checkbox></ion-checkbox>
-            <span>I accept Terms of Use</span>
-          </ion-item>
-          <ion-button (click)="logout()" expand="block" class="register-button">REGISTER NOW</ion-button>
+
+          <ion-select #typeusers_id placeholder="Selecciona tipo de usuario">
+          <ion-select-option value="1">Administrador</ion-select-option>
+          <ion-select-option value="2">Cliente</ion-select-option>
+          </ion-select>
+          
+          <ion-button (click)="Registro(user,email,password,typeusers_id)" expand="block" class="register-button">REGISTER NOW</ion-button>
         </div>
       </div>
     </div>

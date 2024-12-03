@@ -46,16 +46,18 @@ ion-item {
     margin: 20px 0; /* Espaciado entre elementos */
     display: flex;
     align-items: center;
+    border: 1px solid #78c972; /* Borde verde */
+    background-color: rgb(244, 245, 245);
+    border-radius: 8px; /* Bordes redondeados */
 }
 
 /* Estilo de ion-input */
 ion-input {
-    --background: #f9f9f9; /* Fondo claro */
-    border: 1px solid #78c972; /* Borde verde */
-    border-radius: 0px;
+    border-radius: 8px; /* Bordes redondeados */
     padding: 10px;
-    font-size: 16px;
-    color: #333;
+    font-size: 18px;
+    color: #0f0e0e;
+    padding-right: 20px;
 }
 
 /* Estilo del checkbox */
@@ -65,29 +67,25 @@ ion-checkbox {
     --border-color: #4CAF50; /* Borde verde */
 }
 
-/* Estilo del texto de aceptación */
-ion-item span {
-    color: #4CAF50; /* Cambia el color del texto a verde */
-    font-size: 14px; /* Ajusta el tamaño de fuente */
-    font-weight: bold; /* Hace el texto más destacado */
-    margin-left: 10px; /* Espaciado entre el checkbox y el texto */
-}
-
-/* Botón de registro */
 /* Estilo del botón de registro */
 .register-button {
     background-color: #4CAF50; /* Fondo verde personalizado */
     color: white; /* Texto blanco */
     border: none; /* Quitar borde predeterminado */
-    font-size: 18px; /* Tamaño de la fuente */
-    padding: 10px; /* Espaciado dentro del botón */
+    font-size: 20px; /* Tamaño de la fuente */
     border-radius: 20px; /* Bordes redondeados */
     cursor: pointer; /* Hacerlo interactivo */
     transition: background-color 0.3s ease; /* Animación de cambio de color */
     box-shadow: none; /* Quitar sombra predeterminada */
     --box-shadow: none; /* Asegurar que no tenga sombra */
+    width: 80%; /* Hace que el botón ocupe el 80% del ancho del contenedor */
+   
+    display: block; /* Asegura que el botón sea un bloque */
+    text-align: center; /* Centra el texto dentro del botón */
+    margin: 20px auto; /* Centra el botón con un margen automático */
 }
 
+/* Cambiar color al pasar el mouse */
 .register-button:hover {
     background-color: #45a049; /* Color verde más oscuro al pasar el ratón */
 }
@@ -98,4 +96,24 @@ ion-button {
     --border-color: transparent; /* Borrar borde */
     --color: inherit; /* Mantener el color heredado del contenedor */
     --box-shadow: none; /* Quitar sombra predeterminada */
+}
+
+/* Estilo para el ion-select (Tipo de usuario) */
+ion-select {
+    color: #0c0b0b; /* Color del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: rgb(244, 245, 245);
+    margin-bottom: 20px;
+    border: 1px solid #78c972; /* Borde verde */
+}
+
+/* Estilo para las opciones de ion-select */
+ion-select-option {
+    color: #000000; /* Color del texto de las opciones */
+}
+
+/* Opcional: Personaliza el color de fondo cuando el select esté activo */
+ion-select:hover,
+ion-select:focus {
+    --background: #A7D8FF; /* Fondo celeste cuando esté activo */
 }

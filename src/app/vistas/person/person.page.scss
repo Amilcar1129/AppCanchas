@@ -1,37 +1,63 @@
-/* Cambia el color de fondo de ion-content a celeste */
+/* Fondo de la página: celeste */
 ion-content {
-  --ion-background-color: #add8e6; /* Color celeste */
+  --ion-background-color: #add8e6; /* Fondo general celeste */
 }
 
-/* Contenedor único para todo el contenido, imagen y formulario */
+/* Contenedor principal */
 .content-container {
   background-color: #add8e6; /* Fondo celeste */
   padding: 16px;
 }
 
-/* Estilo para el contenedor del perfil */
-.profile-container {
-  padding: 16px;
-}
-
-/* Estilos del encabezado del perfil */
+/* Encabezado de perfil */
 .profile-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+/* Estilo para la foto de perfil dentro de ion-avatar */
+ion-avatar {
+  border: 3px solid #0078d7; /* Borde azul */
+  border-radius: 50%; /* Bordes redondeados completamente (círculo) */
+  overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+  width: 80px; /* Ancho del avatar */
+  height: 80px; /* Alto del avatar */
 }
 
-/* Estilo del botón de edición de avatar dentro del contenedor */
+/* Opcional: Ajustar la imagen dentro del avatar */
+ion-avatar img {
+  object-fit: cover; /* Asegura que la imagen llene el espacio sin deformarse */
+  width: 100%; /* Imagen del mismo tamaño que el contenedor */
+  height: 100%; /* Imagen del mismo tamaño que el contenedor */
+}
+
+/* Botón de edición debajo del avatar */
 .edit-avatar-button {
-  margin-left: 16px;
+  margin-top: 10px;
+  background-color: #0078d7; /* Azul */
+  color: #ffffff; /* Texto blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 6px 12px; /* Tamaño del botón */
+  font-size: 0.9rem;
 }
 
-/* Estilo para el formulario y mantener su diseño predeterminado */
+
+/* Estilo del botón para editar avatar */
+.edit-avatar-button {
+  font-size: 0.9rem;
+  color: #ffffff; /* Texto blanco */
+  background-color: #0078d7; /* Azul Microsoft */
+  border-radius: 8px; /* Botón redondeado */
+  padding: 6px 12px;
+}
+
+/* Contenedor del formulario */
 .form-container {
   margin-top: 20px;
   background-color: #d3d3d3; /* Fondo gris claro */
   padding: 16px;
-  border-radius: 8px;
+  border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
@@ -39,28 +65,42 @@ ion-content {
 .form-title {
   font-size: 1.5rem;
   margin-bottom: 16px;
-  color: #808080; /* Color gris para el texto */
-  font-weight: normal;
+  color: #404040; /* Gris oscuro */
+  font-weight: 500;
 }
 
-/* Estilos de los elementos del formulario */
+/* Estilo de los elementos del formulario */
 .form-item {
   margin-bottom: 16px;
-}
-
-/* Estilos para los campos con fondo verde */
-.green-input {
-  --background: #d4f8d4 !important; /* Fondo verde claro */
-  --border-radius: 10px;  /* Bordes redondeados */
-  --padding-start: 12px;  /* Padding interno para la entrada */
+  --background: #e6f7ff; /* Fondo azul claro */
+  --border-radius: 8px; /* Bordes redondeados */
+  --padding-start: 12px;
   --padding-end: 12px;
-  --padding-top: 8px;
-  --padding-bottom: 8px;
-  --box-shadow: none !important;  /* Eliminar cualquier sombra predeterminada */
-  --color: #000000 !important;  /* Color de texto negro */
+  --padding-top: 10px;
+  --padding-bottom: 10px;
 }
 
-/* Estilo para las etiquetas de los campos */
+/* Cambiar color de las etiquetas a negro */
 ion-label {
-  color: #000000; /* Color negro para las etiquetas */
+  color: #000000 !important; /* Negro */
+  font-weight: 500; /* Grosor para visibilidad */
+  font-size: 1rem; /* Tamaño uniforme */
+}
+
+/* Cambiar el color del texto en los inputs */
+ion-input {
+  --color: #0000FF; /* Azul para texto del input */
+  --placeholder-color: #0000FF; /* Azul para el placeholder */
+  font-size: 1rem; /* Tamaño uniforme */
+}
+
+/* Opcional: estilos para inputs con foco */
+ion-input:focus {
+  border: 1px solid #0000FF; /* Borde azul al seleccionar el campo */
+  box-shadow: 0 0 4px #0000FF; /* Sombra azul */
+}
+
+/* General: Botones redondeados */
+ion-button {
+  --border-radius: 8px; /* Redondear bordes de botones */
 }

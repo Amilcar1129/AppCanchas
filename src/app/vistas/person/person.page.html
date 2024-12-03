@@ -1,79 +1,69 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Edit Profile</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <!-- Contenedor único para todo el contenido del perfil con fondo celeste -->
   <div class="content-container">
+    <!-- Encabezado -->
     <ion-header collapse="condense">
       <ion-toolbar>
         <ion-title size="large">Perfil</ion-title>
       </ion-toolbar>
     </ion-header>
 
-    <ion-list class="profile-container">
-      <!-- Contenedor de la imagen de perfil y el botón de edición -->
-      <ion-item lines="none" class="profile-header">
-        <ion-avatar slot="start">
-          <img src="assets/avatar-placeholder.png" alt="Profile">
-        </ion-avatar>
-        <!-- Botón de edición dentro del mismo contenedor -->
-        <ion-button fill="clear" class="edit-avatar-button">Edit picture or avatar</ion-button>
+    <!-- Contenedor de avatar y botón -->
+    <div class="profile-header">
+      <ion-avatar slot="start">
+        <img src="assets/avatar-placeholder.png" alt="Profile">
+      </ion-avatar>
+      <ion-button fill="solid" class="edit-avatar-button">Edit picture or avatar</ion-button>
+    </div>
+
+    <!-- Contenedor del formulario -->
+    <div class="form-container">
+      <h2 class="form-title">Mi Perfil</h2>
+
+      <!-- Lista de campos -->
+      <ion-item class="form-item">
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input placeholder="Enter username" value="{{profile.user.user}}"></ion-input>
       </ion-item>
 
-      <!-- Formulario dentro del mismo contenedor -->
-      <div class="form-container">
-        <h2 class="form-title">Edit Your Profile</h2>
+      <ion-item class="form-item">
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" placeholder="Enter password"></ion-input>
+      </ion-item>
 
-        <!-- Campos del formulario -->
-        <ion-item class="form-item green-input">
-          <ion-label position="stacked">Username</ion-label>
-          <ion-input placeholder="Enter username" value="{{profile.user.user}}"></ion-input>
-        </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input placeholder="Enter email" value="{{profile.user.email}}"></ion-input>
+      </ion-item>
 
-        <!-- Otros campos del formulario (igual que antes) -->
-        <ion-item class="form-item green-input">
-          <ion-label position="stacked">Password</ion-label>
-          <ion-input type="password" placeholder="Enter password"></ion-input>
-        </ion-item>
-        
-        <ion-item class="form-item green-input">
-          <ion-label position="stacked">Email</ion-label>
-          <ion-input placeholder="Enter email" value="{{profile.user.email}}"></ion-input>
-        </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="stacked">Name</ion-label>
+        <ion-input placeholder="Enter name" value="{{profile.user.Person.name}}"></ion-input>
+      </ion-item>
 
-        <ion-item class="form-item green-input">
-          <ion-label position="stacked">Name</ion-label>
-          <ion-input placeholder="Enter name" value="{{profile.user.name}}"></ion-input>
-        </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="stacked">Lastname</ion-label>
+        <ion-input placeholder="Enter lastname" value="{{profile.user.Person.lastname}}"></ion-input>
+      </ion-item>
 
-        <ion-item class="form-item green-input">
-          <ion-label position="stacked">Lastname</ion-label>
-          <ion-input placeholder="Enter lastname" value="{{profile.user.lastname}}"></ion-input>
-        </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="stacked">CI</ion-label>
+        <ion-input placeholder="Enter CI" value="{{profile.user.Person.ci}}"></ion-input>
+      </ion-item>
 
-        <ion-item class="form-item green-input">
-          <ion-label position="stacked">CI</ion-label>
-          <ion-input placeholder="Enter CI"></ion-input>
-        </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="stacked">Address</ion-label>
+        <ion-input placeholder="Enter address" value="{{profile.user.Person.address}}"></ion-input>
+      </ion-item>
 
-        <ion-item class="form-item green-input">
-          <ion-label position="stacked">Address</ion-label>
-          <ion-input placeholder="Enter address"></ion-input>
-        </ion-item>
+      <ion-item class="form-item">
+        <ion-label position="stacked">Phone</ion-label>
+        <ion-input placeholder="Enter phone" value="{{profile.user.Person.phone}}"></ion-input>
+      </ion-item>
 
-        <ion-item class="form-item green-input">
-          <ion-label position="stacked">Phone</ion-label>
-          <ion-input placeholder="Enter phone"></ion-input>
-        </ion-item>
-
-        <ion-item class="form-item green-input">
-          <ion-label position="stacked">Photo</ion-label>
-          <ion-input placeholder="Enter photo link"></ion-input>
-        </ion-item>
-      </div>
-    </ion-list>
+      <ion-item class="form-item">
+        <ion-label position="stacked">Photo</ion-label>
+        <ion-input placeholder="Enter photo link"></ion-input>
+      </ion-item>
+    </div>
   </div>
 </ion-content>

@@ -28,10 +28,10 @@ export class PersonPage implements OnInit {
     this.usuarioService.getOneUser(this.personid).subscribe({
       next: (data:any) => {
         this.profile=data;
-        debugger
+        
   },
   error: (error:any) => {
-    debugger
+    
 
 }
     })

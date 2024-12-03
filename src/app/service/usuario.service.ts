@@ -22,4 +22,18 @@ export class UsuarioService {
 
     return this.http.get('http://localhost:3000/api/user/'+id, { headers: header });
   }
+
+  Registro (user:string, email:string,password:string,typeusers_id:any){
+    const data={
+      user:user,
+      email:email,
+      password:password,
+      typeusers_id:typeusers_id
+    
+    }
+
+
+    return this.http.post('http://localhost:3000/api/register',data);
+}
+
 }
