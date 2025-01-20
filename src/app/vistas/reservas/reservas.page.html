@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reservar Cancha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Detalles de la Reserva</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="guardarReserva()">
+        <!-- Fecha -->
+        <ion-item>
+          <ion-label position="floating">Fecha</ion-label>
+          <ion-input
+            type="date"
+            [(ngModel)]="reserva.date"
+            (ionChange)="reserva.date = $event.detail.value || ''">
+          </ion-input>
+        </ion-item>
+
+        <!-- Hora de inicio -->
+        <ion-item>
+          <ion-label position="floating">Hora de Inicio</ion-label>
+          <ion-input
+            type="time"
+            [(ngModel)]="reserva.start_time"
+            (ionChange)="reserva.start_time = $event.detail.value || ''">
+          </ion-input>
+        </ion-item>
+
+        <!-- Hora de fin -->
+        <ion-item>
+          <ion-label position="floating">Hora de Fin</ion-label>
+          <ion-input
+            type="time"
+            [(ngModel)]="reserva.end_time"
+            (ionChange)="reserva.end_time = $event.detail.value || ''">
+          </ion-input>
+        </ion-item>
+
+        <!-- Botón Guardar -->
+        <ion-button expand="block" type="submit" color="success">
+          Guardar Reserva
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

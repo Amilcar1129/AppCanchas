@@ -27,6 +27,12 @@ export const routes: Routes = [
     loadComponent: () => import('./vistas/principal/principal.page').then( m => m.PrincipalPage)
   },
   {
+    path: 'reserva',
+    loadComponent: () =>
+      import('./vistas/reservas/reservas.page').then((m) => m.ReservaPage), // Carga directa de ReservaPage
+  },
+  
+  {
     path: 'person',
     loadComponent: () => import('./vistas/person/person.page').then( m => m.PersonPage)
   },
@@ -34,5 +40,28 @@ export const routes: Routes = [
     path: 'register',
     loadComponent: () => import('./vistas/register/register.page').then( m => m.RegisterPage)
   },
+  {
+    path: 'crear-cancha',
+    loadComponent: () =>
+      import('./vistas/crear-cancha/crear-cancha.component').then(m => m.CrearCanchaComponent)// Nueva ruta
+  },
+ 
+  {
+    path: 'tabs',
+    loadComponent: () => import('./vistas/principal/principal.page').then((m) => m.PrincipalPage),
+    children: [
+     
+      {
+        path: 'person',
+        loadComponent: () => import('./vistas/person/person.page').then((m) => m.PersonPage),
+      },
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+   },
+  ],
+},
+
 
 ];

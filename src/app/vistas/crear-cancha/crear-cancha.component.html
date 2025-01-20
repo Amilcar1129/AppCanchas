@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-content>
+    <h2>Crear Nueva Cancha</h2>
+
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input [(ngModel)]="cancha.name" placeholder="Nombre de la cancha"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Ubicación</ion-label>
+        <ion-input [(ngModel)]="cancha.location" placeholder="Ubicación"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Tipo</ion-label>
+        <ion-input [(ngModel)]="cancha.type" placeholder="Tipo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Precio/hora</ion-label>
+        <ion-input type="number" [(ngModel)]="cancha.price_per_hour" placeholder="Precio"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" color="primary" (click)="onSubmit()">Crear Cancha</ion-button>
+  </ion-content>
+</ion-app>
