@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { permissionGuard } from './guard/permission.guard';
 
 export const routes: Routes = [
   {
@@ -12,56 +13,44 @@ export const routes: Routes = [
   },
   {
     path: 'welcome',
-    loadComponent: () => import('./vistas/welcome/welcome.page').then( m => m.WelcomePage)
+    loadComponent: () => import('./welcome/welcome.page').then(m => m.WelcomePage)
   },
   {
     path: 'saludo',
-    loadComponent: () => import('./vistas/saludo/saludo.page').then( m => m.SaludoPage)
+    loadComponent: () => import('./saludo/saludo.page').then(m => m.SaludoPage)
   },
   {
     path: 'bienvenida',
-    loadComponent: () => import('./vistas/bienvenida/bienvenida.page').then( m => m.BienvenidaPage)
+    loadComponent: () => import('./bienvenida/bienvenida.page').then(m => m.BienvenidaPage)
   },
   {
-    path: 'principal',
-    loadComponent: () => import('./vistas/principal/principal.page').then( m => m.PrincipalPage)
-  },
-  {
-    path: 'reserva',
-    loadComponent: () =>
-      import('./vistas/reservas/reservas.page').then((m) => m.ReservaPage), // Carga directa de ReservaPage
-  },
-  
-  {
-    path: 'person',
-    loadComponent: () => import('./vistas/person/person.page').then( m => m.PersonPage)
+    path: 'reserva/:id',
+    loadComponent: () => import('./reservas/reservas.page').then(m => m.ReservaPage)
   },
   {
     path: 'register',
-    loadComponent: () => import('./vistas/register/register.page').then( m => m.RegisterPage)
+    loadComponent: () => import('./register/register.page').then(m => m.RegisterPage)
+  },
+
+  {
+    path: 'principal',  // Definir principal como una ruta principal
+    loadComponent: () => import('./principal/principal.page').then(m => m.PrincipalPage)
   },
   {
-    path: 'crear-cancha',
-    loadComponent: () =>
-      import('./vistas/crear-cancha/crear-cancha.component').then(m => m.CrearCanchaComponent)// Nueva ruta
+    path: 'crear',
+    loadComponent: () => import('./crear/crear.page').then( m => m.CrearPage)
   },
- 
+  
   {
-    path: 'tabs',
-    loadComponent: () => import('./vistas/principal/principal.page').then((m) => m.PrincipalPage),
-    children: [
-     
-      {
-        path: 'person',
-        loadComponent: () => import('./vistas/person/person.page').then((m) => m.PersonPage),
+path: 'person',
+        loadComponent: () => import('./person/person.page').then(m => m.PersonPage),
+       // canActivate: [permissionGuard]
       },
       {
         path: '',
-        redirectTo: 'home',
-        pathMatch: 'full',
-   },
-  ],
-},
+        redirectTo: 'principal',
+        pathMatch: 'full'
+      },
 
-
+  
 ];

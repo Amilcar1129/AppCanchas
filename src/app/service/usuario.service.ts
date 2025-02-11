@@ -1,5 +1,6 @@
 import { HttpClient,HttpHeaders  } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IUser } from '../interface/IUser';
 
 
 @Injectable({
@@ -20,7 +21,7 @@ export class UsuarioService {
     const header = new HttpHeaders()
     .set('Authorization', `Bearer ${localStorage.getItem('token')}`);
 
-    return this.http.get('http://localhost:3000/api/user/'+id, { headers: header });
+    return this.http.get<IUser>('http://localhost:3000/api/user/'+id, { headers: header });
   }
 
   Registro (user:string, email:string,password:string,typeusers_id:any){

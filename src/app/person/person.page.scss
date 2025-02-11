@@ -1,0 +1,76 @@
+.profile-container {
+  margin-top: 20px;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f8;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.profile-header ion-avatar {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border: 3px solid #3880ff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header img {
+  border-radius: 50%;
+}
+
+.edit-avatar-button {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #3880ff;
+  text-decoration: underline;
+}
+
+ion-item {
+  --background: #ffffff;
+  --border-color: transparent;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px 20px;
+}
+
+ion-item ion-label {
+  font-size: 14px;
+  color: #4a4a4a;
+  font-weight: 500;
+}
+
+ion-item ion-input {
+  font-size: 16px;
+  color: #2c2c2c;
+  font-weight: bold;
+}
+
+.footer-item {
+  text-align: center;
+  margin-top: 10px;
+  color: #3880ff;
+  font-weight: bold;
+}
+
+.footer-item ion-label {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.footer-item ion-label:hover {
+  color: #2c7be5;
+}
+
+ion-list {
+  padding-bottom: 20px;
+}

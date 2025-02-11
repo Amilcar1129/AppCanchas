@@ -33,6 +33,7 @@ export class WelcomePage implements OnInit {
       next: async (datos:any) => { 
         localStorage.setItem('token', datos.token);
         localStorage.setItem('id',datos.dataUser.id);
+        localStorage.setItem('idp',datos.dataUser.persons_id)
         localStorage.setItem('username',datos.dataUser.user);
         loading.dismiss();
         this.router.navigateByUrl('principal');     

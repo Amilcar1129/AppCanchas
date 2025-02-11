@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CanchaService {
-  private baseUrl = 'http://localhost:3000/api/canchas'; // Cambia esto según tu endpoint
+  private baseUrl = 'http://localhost:3000/api/canchas';
+  
 
   constructor(private http: HttpClient) {}
 
-  // Obtener todas las canchas
+  // Obtener las canchas
   getAllCanchas(): Observable<any> {
     return this.http.get(this.baseUrl);
   }
@@ -20,7 +21,7 @@ export class CanchaService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  // Crear una nueva cancha
+  // Crear cancha
   createCancha(cancha: { name: string; location: string; type: string; price_per_hour: null }): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',

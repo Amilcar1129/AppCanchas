@@ -34,30 +34,31 @@
       </ion-row>
     </ion-grid>
 
-    <!-- Sección de canchas disponibles -->
-    <div class="canchas-section">
-      <h2>Canchas Disponibles</h2>
-      <ion-grid>
-        <ion-row *ngFor="let cancha of canchas">
-          <ion-col>
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title>{{ cancha.name }}</ion-card-title>
-              </ion-card-header>
-              <ion-card-content>
-                <p>Ubicación: {{ cancha.location }}</p>
-                <p>Tipo: {{ cancha.type }}</p>
-                <p>Precio por hora: ${{ cancha.price_per_hour }}</p>
-                <!-- Aquí agregas el botón de reservar -->
-                <ion-button expand="block" color="primary" (click)="reservarCancha(cancha)">Reservar</ion-button>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </div>
-    
-
+ <!-- Sección de canchas disponibles -->
+<div class="canchas-section">
+  <h2>Canchas Disponibles</h2>
+  <ion-grid>
+    <ion-row *ngFor="let cancha of canchas">
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ cancha.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Ubicación: {{ cancha.location }}</p>
+            <p>Tipo: {{ cancha.type }}</p>
+            <p>Precio por hora: ${{ cancha.price_per_hour }}</p>
+            <!-- Aquí agregas el botón de reservar con el identificador de la cancha -->
+            <ion-button expand="block" color="primary" [routerLink]="['/reserva', cancha.id]">
+              Reservar Cancha
+            </ion-button>
+            
+                      </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
     <div class="matches-section">
       <h2>Partidos en Vivo</h2>
       <ion-grid>
@@ -92,26 +93,27 @@
         <ion-button expand="block" color="warning">Activar</ion-button>
       </ion-card>
     </div>
+
   </ion-content>
 
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="home">
-        <ion-icon name="play-circle"></ion-icon>
-        Listen Now
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="cancha" routerLink='/crear'>
+      <ion-icon name="football-outline"></ion-icon>
+      Canchas
+    </ion-tab-button>
+      <ion-tab-button tab="principal" routerLink='/principal'>
+        <ion-icon name="home-outline"></ion-icon>
+        principal
       </ion-tab-button>
-      <ion-tab-button tab="radio">
-        <ion-icon name="radio"></ion-icon>
-        Radio
+      <ion-tab-button tab="reserva" routerLink='/reserva/id'>
+        <ion-icon name="calendar-outline"></ion-icon>
+        reserva
       </ion-tab-button>
-      <ion-tab-button tab="principal" [routerLink]="['/tabs/principal']">
-        <ion-icon name="book"></ion-icon>
-        Library
-      </ion-tab-button>
-      <ion-tab-button tab="person" [routerLink]="['/tabs/person']">
+      <ion-tab-button tab="person" routerLink='/person'>
         <ion-icon name="person-circle-outline"></ion-icon>
         {{ user }}
       </ion-tab-button>
+      
     </ion-tab-bar>
-  </ion-tabs>
+ 
 </ion-app>

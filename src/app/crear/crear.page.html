@@ -23,4 +23,25 @@
 
     <ion-button expand="block" color="primary" (click)="onSubmit()">Crear Cancha</ion-button>
   </ion-content>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="cancha" routerLink='/crear'>
+      <ion-icon name="football-outline" ></ion-icon>
+      Canchas
+    </ion-tab-button>
+    <ion-tab-button tab="principal" routerLink='/principal'>
+      <ion-icon name="home-outline"></ion-icon>
+      principal
+    </ion-tab-button>
+    <ion-tab-button tab="reserva"routerLink='/reserva/id'>
+      <ion-icon name="calendar-outline"></ion-icon>
+      reserva
+    </ion-tab-button>
+    <ion-tab-button tab="person" routerLink='/person'>
+      <ion-icon name="person-circle-outline"></ion-icon>
+      {{ user }}
+    </ion-tab-button>
+    
+  </ion-tab-bar>
+
 </ion-app>

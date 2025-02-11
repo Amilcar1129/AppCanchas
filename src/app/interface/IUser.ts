@@ -2,7 +2,7 @@ export interface IUser {
     id: number;               // ID único del usuario
     user: any;             // Nombre de usuario
     email: string;            // Correo electrónico del usuario
-    person_id: number;        // Relación con la entidad 'Person'
+    persons_id: number;        // Relación con la entidad 'Person'
     person: IPerson;    // Información personal, puede ser null
   }
   

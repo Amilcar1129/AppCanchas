@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reservas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (submit)="createReserva()">
+    <ion-item>
+      <ion-label position="floating">User ID</ion-label>
+      <ion-input [(ngModel)]="newReserva.user_id" name="user_id" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cancha ID</ion-label>
+      <ion-input [(ngModel)]="newReserva.cancha_id" name="cancha_id" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Date</ion-label>
+      <ion-input [(ngModel)]="newReserva.date" name="date" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Start Time</ion-label>
+      <ion-input [(ngModel)]="newReserva.start_time" name="start_time" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">End Time</ion-label>
+      <ion-input [(ngModel)]="newReserva.end_time" name="end_time" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Total Price</ion-label>
+      <ion-input [(ngModel)]="newReserva.total_price" name="total_price" required></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="full">Create Reserva</ion-button>
+  </form>
+
+  <ion-list>
+    <ion-item *ngFor="let reserva of reservas">
+      <ion-label>
+        <h2>User ID: {{reserva.user_id}}</h2>
+        <p>Cancha ID: {{reserva.cancha_id}}</p>
+        <p>Date: {{reserva.date}}</p>
+        <p>Start Time: {{reserva.start_time}}</p>
+        <p>End Time: {{reserva.end_time}}</p>
+        <p>Total Price: {{reserva.total_price}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="cancha" routerLink="/crear">
+    <ion-icon name="football-outline" ></ion-icon>
+    Canchas
+  </ion-tab-button>
+  <ion-tab-button tab="principal" routerLink='/principal'>
+    <ion-icon name="home-outline"></ion-icon>
+    principal
+  </ion-tab-button>
+  <ion-tab-button tab="reserva"routerLink='/reserva/id'>
+    <ion-icon name="calendar-outline"></ion-icon>
+    reserva
+  </ion-tab-button>
+  <ion-tab-button tab="person" routerLink='/person'>
+    <ion-icon name="person-circle-outline"></ion-icon>
+    {{ user }}
+  </ion-tab-button>
+  
+</ion-tab-bar>
+

@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end" (click)="editPerfil()">
+      <ion-icon slot="end" name="pencil" ></ion-icon>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="profile?.user?.Person">
+  <ion-list class="profile-container">
+    <ion-item lines="none" class="profile-header">
+      <ion-avatar slot="start">
+        <img src="http://127.0.0.1:3000/imagenes/personas/{{profile.user.Person.photo}}" alt="Profile">
+      </ion-avatar>
+
+      <ion-input type="file" (change)="changeImage($event)" ></ion-input>
+
+      <ion-button   fill="clear" class="edit-avatar-button">Edit picture or avatar</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input #nombre [disabled]="editDatos" placeholder="Enter name" [value]="profile.user.Person.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Lastname</ion-label>
+      <ion-input #apellido [disabled]="editDatos" placeholder="Enter lastname" [value]="profile.user.Person.lastname"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">CI</ion-label>
+      <ion-input #cedula [disabled]="editDatos" placeholder="Enter CI" [value]="profile.user.Person.ci"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Address</ion-label>
+      <ion-input #direccion [disabled]="editDatos" placeholder="Enter address" [value]="profile.user.Person.address"></ion-input>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Phone</ion-label>
+      <ion-input #telefono [disabled]="editDatos" placeholder="Enter phone" [value]="profile.user.Person.phone"></ion-input>
+    </ion-item>
+    <ion-item lines="none" class="footer-item">
+      <ion-label (click)="updatePerson(nombre,apellido,cedula,direccion,telefono)">Cambiar usuario</ion-label>
+    </ion-item>
+    <ion-item lines="none" class="footer-item">
+      <ion-label>Cambiar password</ion-label>
+    </ion-item>
+    <ion-button color="danger" fill="outline" (click)="cerrarSesion()">Cerrar Sesion </ion-button>
+
+  </ion-list>
+</ion-content>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="home">
+    <ion-icon name="play-circle"></ion-icon>
+    Listen Now
+  </ion-tab-button>
+  <ion-tab-button  tab="principal" routerLink='/principal'>
+    <ion-icon name="home-outline"></ion-icon>
+    principal
+  </ion-tab-button>
+  <ion-tab-button tab="reserva">
+    <ion-icon name="calendar-outline" routerLink='/reserva/id'></ion-icon>
+     reserva
+  </ion-tab-button>
+  
+</ion-tab-bar>

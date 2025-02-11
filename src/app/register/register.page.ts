@@ -7,12 +7,13 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 import { LoadingController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
   styleUrls: ['./register.page.scss'],
   standalone: true,
-  imports: [IonLabel, IonCheckbox, IonInput, IonItem, IonButton, IonApp, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,RouterLink,IonSelect,IonSelectOption]
+  imports: [IonLabel, IonInput, IonItem, IonButton, IonApp, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,RouterLink,IonSelect,IonSelectOption]
 })
 export class RegisterPage implements OnInit {
 
